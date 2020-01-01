@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GCD Accelerator</title>
+
+    <!-- CSS and javascript library -->
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/popper.min.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
+    <script src="../static/d3.v3.min.js"></script>
+    <script src="../static/d3.tip.v0.6.3.js"></script>
+
+    <!-- My CSS file -->
+    <link rel="stylesheet" href="../static/my_style.css">
+</head>
+<body>
+    <!-- Container is required when using Bootstrap default grid system -->
+    <div class="container">
+
+        <!-- Bootstrap grid system -->
+        <div class="row h-100">
+            <div class="col-8 offset-2 my-auto">
+
+                <!-- Nested Bootstrap grid system -->
+                <div class="row">
+                    <div class="col-6">
+
+                        <!-- Content -->
+                        <form>
+                            <!-- Input A -->
+                            <div class="form-group">
+                                <h3><b>A</b></h3>
+                                <input type="text" id="inp_a" class="form-control">
+                            </div>
+                            <!-- Input B -->
+                            <div class="form-group">
+                                <h3><b>B</b></h3>
+                                <input type="text" id="inp_b" class="form-control">
+                            </div>
+                            <!-- Buttons -->
+                            <div class="text-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary" id="btn_calculate">Calculate</button>
+                                    <button type="button" class="btn btn-secondary" id="btn_reset">Reset</button>
+                                </div>
+                            </div>
+                            <!-- Output C -->
+                            <div class="text-center mt-5">
+                                <h3>Result: <b>C = <span id="txt_c">0</span></b></h3>
+                            </div>
+                        </form>
+                        <!-- End of content -->
+
+                    </div>
+                    <div class="col-6">
+
+                        <!-- Content -->
+                        <h4><b>FPGA-based GCD Accelerator</b></h4>
+                        <p>This chart compares the performance between hardware accelerator and software routine of the GCD algorithm.</p>
+                        <h4 class="text-center"><span class="badge badge-warning">C = GCD(A, B)</span></h4>
+                        <div class="row">
+                            <div class="col-6 my-auto text-center">
+                                <!-- Chart -->
+                                <svg id="svg_chart"></svg>
+                            </div>
+                            <div class="col-6 my-auto text-center">
+                                <!-- Speed up -->
+                                <p>Speed Up</p>
+                                <h1><b><span id="txt_speed_up">0</span>×</b></h1>
+                            </div>
+                        </div>
+                        <!-- End of content -->
+
+                    </div>
+                </div>
+                <!-- End of nested Bootstrap grid system -->
+
+            </div>
+        </div>
+        <!-- End of Bootstrap grid system -->
+
+    </div>
+    <!-- End of container -->
+
+    <!-- My JS file -->
+    <script src='../static/my_script.js'></script>
+</body>
+</html>
